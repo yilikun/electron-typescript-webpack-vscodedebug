@@ -1,0 +1,25 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Electron Main",
+      // "stopOnEntry": true,
+      "program": "${workspaceFolder}/src/main.ts",
+      "sourceMaps": true, // true
+      "request": "launch", // "main.bundle.js"
+      "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/electron", //webpack_dist/product/cyclone_starter
+      "outFiles": [
+        "${workspaceFolder}/webpack_dist/*.js"
+      ],
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "preLaunchTask": "webpack-main",
+      "type": "pwa-node",
+      // "preLaunchTask": "webpack-main",
+      // "trace": true,
+      "console": "internalConsole",
+      "outputCapture": "std"
+    },
+  ]
+}
